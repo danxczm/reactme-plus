@@ -1,13 +1,10 @@
 {
   "files": {
-    "main.css": "/reactme-plus/static/css/main.e6c13ad2.css",
-    "main.js": "/reactme-plus/static/js/main.24d18a8b.js",
+    "main.js": "/reactme-plus/static/js/main.3345ba08.js",
     "index.html": "/reactme-plus/index.html",
-    "main.e6c13ad2.css.map": "/reactme-plus/static/css/main.e6c13ad2.css.map",
-    "main.24d18a8b.js.map": "/reactme-plus/static/js/main.24d18a8b.js.map"
+    "main.3345ba08.js.map": "/reactme-plus/static/js/main.3345ba08.js.map"
   },
   "entrypoints": [
-    "static/css/main.e6c13ad2.css",
-    "static/js/main.24d18a8b.js"
+    "static/js/main.3345ba08.js"
   ]
 }
