@@ -1,20 +1,28 @@
 import { GlobalStyle } from './components/styles/GlobalStyle';
 import { ThemeProvider } from 'styled-components';
-import { StyledButton, DarkButton } from './components/styles/Button.styles';
+import {
+  PlainButton,
+  LightButton,
+  DarkButton,
+} from './components/styles/Button.styles';
 import { Container } from './components/styles/Container';
 import { palette } from './components/styles/palette';
 
 function App() {
   return (
     <ThemeProvider theme={palette}>
+      <GlobalStyle />
       <Container>
-        <GlobalStyle />
         <h3>Light theme buttons</h3>
-        <StyledButton children={'Login'} data-active-light={true} />
-        <StyledButton children={'Next'} data-active-light={true} />
-        <StyledButton children={'Done'} data-active-light={true} />
-        <StyledButton children={'Get SMS code'} data-active-light={false} />
-        <h3>Dark theme buttons</h3>
+        <PlainButton children={'Sign up'} />
+        <LightButton children={'Login'} data-active-light={true} />
+        <LightButton children={'Next'} data-active-light={true} />
+        <LightButton children={'Done'} data-active-light={true} />
+        <LightButton children={'Get SMS code'} data-active-light={false} />
+      </Container>
+      <Container variant="dark">
+        <h3 style={{ color: 'white' }}>Dark theme buttons</h3>
+        <PlainButton children={'Sign up'} data-active-dark={true} />
         <DarkButton children={'Login'} data-active-dark={true} />
         <DarkButton children={'Next'} data-active-dark={true} />
         <DarkButton children={'Done'} data-active-dark={true} />

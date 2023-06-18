@@ -1,10 +1,9 @@
 import styled from 'styled-components';
 
-export const StyledButton = styled.button`
+export const PlainButton = styled.button.attrs({ type: 'button' })`
   width: 344px;
   height: 50px;
-  background-color: ${({ 'data-active-light': active, theme }) =>
-    active ? theme.generalPebblePebble : theme.generalSilverSilver};
+  background-color: inherit;
   backdrop-filter: blur(100px);
   border-radius: 10px;
   border: none;
@@ -13,23 +12,25 @@ export const StyledButton = styled.button`
   font-size: 16px;
   line-height: 21px;
   text-align: center;
-  color: #f7f7f7;
+  /* color: ${theme => theme.generalDavysGray}; */
+  // color: #5c5c5c;
+  color: ${({ 'data-active-dark': active, theme }) =>
+    active ? theme.generalGentleGray : theme.generalDavysGray};
 
   /* ------------------------------------------------ */
   cursor: pointer;
   margin: 15px;
 `;
 
-// ! night mode
-// * background-color:#DADADA active generalGentleGray
-// * color: #404040; active // text generalPebblePebble
-
-// * background-color:#6A6A6A inactive darkThemeShadesOn
-// * color: #c4c4c480; inactive // text generalSilverOp50
+export const LightButton = styled(PlainButton)`
+  background-color: ${({ 'data-active-light': active, theme }) =>
+    active ? theme.generalPebblePebble : theme.generalSilverSilver};
+  /* color: ${theme => theme.generalGhostWhite}; */
+  color: #f7f7f7;
+`;
 
 // Extending Styles
-
-export const DarkButton = styled(StyledButton)`
+export const DarkButton = styled(PlainButton)`
   background-color: ${({ 'data-active-dark': active, theme }) =>
     active ? theme.generalGentleGray : theme.darkThemeShadesOn};
   color: ${({ 'data-active-dark': active, theme }) =>
