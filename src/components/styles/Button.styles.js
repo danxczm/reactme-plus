@@ -12,7 +12,6 @@ export const PlainButton = styled.button.attrs({ type: 'button' })`
   font-size: 16px;
   line-height: 21px;
   text-align: center;
-  /* color: ${theme => theme.generalDavysGray}; */
   // color: #5c5c5c;
   color: ${({ 'data-active-dark': active, theme }) =>
     active ? theme.generalGentleGray : theme.generalDavysGray};

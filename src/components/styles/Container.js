@@ -5,7 +5,7 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  background-color: ${props =>
-    props.variant === 'dark' ? '#141414' : '#E9E9E9'};
+  background-color: ${({ variant }) =>
+    variant === 'dark' ? '#141414' : '#E9E9E9'};
   width: 100vw;
 `;

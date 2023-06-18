@@ -7,6 +7,7 @@ import {
 } from './components/styles/Button.styles';
 import { Container } from './components/styles/Container';
 import { palette } from './components/styles/palette';
+import InputField from './components/InputField';
 
 function App() {
   return (
@@ -27,6 +28,11 @@ function App() {
         <DarkButton children={'Next'} data-active-dark={true} />
         <DarkButton children={'Done'} data-active-dark={true} />
         <DarkButton children={'Get SMS code'} data-active-dark={false} />
+      </Container>
+      <Container>
+        <h3 style={{ marginBottom: '10px' }}>Light theme inputs</h3>
+        <InputField label={'Phone number'} />
+        <InputField label={'SMS Code'} />
       </Container>
     </ThemeProvider>
   );
